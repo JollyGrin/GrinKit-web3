@@ -1,5 +1,7 @@
-import { Grid, Text } from '@chakra-ui/react'
-import Head from 'next/head'
+import { Grid, Text, Box } from "@chakra-ui/react";
+import Head from "next/head";
+import { Navbar } from "@/components/Nav";
+import { VerifyButton } from "@/components/VerifyButton";
 
 export default function Home() {
   return (
@@ -10,12 +12,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Grid bg='red' h='100%' placeItems='center' >
-        <Text>
-          GrinKit - Web3
-        </Text>
-
+      <Navbar />
+      <Grid h="100%" placeItems="center">
+        <VerifyButton />
       </Grid>
     </>
-  )
+  );
 }
